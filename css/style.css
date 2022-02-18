@@ -7,7 +7,7 @@ html {
     -o-background-size: cover;
     background-size: cover;
 
-  }
+}
 
 
 /*폰트설정*/
@@ -20,14 +20,21 @@ html {
 
 * {
     font-family: GmarketSansLight;
+    color: #F5F2E7;
 }
 
 
-  /* body의 기본 패딩, 마진 제거 */
-  body{
-      margin: 0;
-      padding: 0;
-  }
+/* body의 기본 패딩, 마진 제거 */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*모든 a태그 효과 삭제*/
+a {
+    text-decoration: none;
+    color: #F5F2E7;
+}
 
 /* 왼쪽 기능 설정 */
 .temp-side {
@@ -61,6 +68,18 @@ html {
     height: inherit;
 
     color: #F5F2E7;
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+
+    width: 400px;
+    padding: 10px 100px;
 }
 
 .clothes-box {
@@ -144,4 +163,57 @@ tr {
 
 .cities option {
     background-color: #19282F;
+}
+
+/*이야기 설정*/
+.comment-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group > label {
+    float: left;
+}
+
+.form-control {
+    width: 380px;
+    background: none;
+    border: 1px solid;
+    border-radius: 8px;
+
+    margin-top: 10px;
+    padding: 8px;
+}
+
+.btn {
+    background: none;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.form-text {
+    padding: 20px 0;
+}
+
+.text-muted {
+    display: block;
 }
