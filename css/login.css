@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: GmarketSansLight;
+}
+
+
+
+.form {
+    background-color: antiquewhite;
+
+    width: 400px;
+    height: 400px;
+
+    margin: auto;
+}
+.title {
+    width: 150px;
+    height: 60px;
+
+    margin: 0px auto;
+    padding-top: 15px;
+    padding-left: 30px;
+    font-size: 35px;
+}
+.form-group {
+    width: 350px;
+    height: 70px;
+
+    margin: 10px auto auto auto;
+}
+.form-group-pw {
+    margin: 10px auto 10px 25px;
+}
+
+
+.form-control {
+    width: 260px;
+    height: 30px;
+
+    border-radius: 10px;
+    border-width: thin;
+    border-color: #bfbfbf;
+    border-style: solid;
+
+    margin-left: 5px;
+    padding: 3px;
+
+}
+.form-control-pw {
+    width: 215px;
+    height: 30px;
+
+    border-radius: 10px;
+    border-width: thin;
+    border-color: #bfbfbf;
+    border-style: solid;
+
+    margin-left: 5px;
+    padding: 3px;
+
+}
+/* 패스워드 입력 */
+.form-check {
+    width: 200px;
+    height: 30px;
+
+    margin: 10px auto 10px 24px;
+
+}
+
+.btn-all {
+    width: 350px;
+    height: 40px;
+
+    margin: auto 65px;
+
+}
+.btn-all :hover {
+    background-color: #c7c7c7;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+
+    border-radius: 10px;
+    border-width: thin;
+    border-color: #D1D1D1;
+    border-style: solid;
+
+    margin-left: 20px;
+    margin-bottom: 15px;
+
+    float: left;
+}
+.btn-1 {
+    width: 100px;
+    height: 40px;
+
+    border-radius: 10px;
+    border-width: thin;
+    border-color: #D1D1D1;
+    border-style: solid;
+
+    margin-left: 20px;
+    margin-bottom: 15px;
+
+    float: left;
+}
+
+/* submite 버튼 */
+
+.login-api {
+
+    margin: 10px auto auto 49px;
+}
+/*카카오 로그인 이미지 파일 간격조정 */
+
+.links {
+    width: 250px;
+    height: 30px;
+
+    margin: 5px 55px auto auto;
+}
+

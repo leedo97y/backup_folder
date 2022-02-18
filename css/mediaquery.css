@@ -1,0 +1,31 @@
+/*1350px보다 작아졌을 때*/
+@media (max-width: 1350px) {
+    .wrap {
+        display: flex;
+        flex-direction: column-reverse;
+        float: right;
+    }
+
+    .temp-side {
+        position: unset;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 600px;
+        text-align: center;
+    }
+
+    .now-temp {
+        font-size: 50px;
+    }
+
+    .now-city {
+        font-size: 20px;
+    }
+
+    .now-icon {
+        font-size: 40px;
+    }
+
+    .blackbox {
+        height: 90vh;
+    }
+}

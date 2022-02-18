@@ -1,0 +1,147 @@
+/* 배경화면 설정 */
+/* linear-gradient는 배경 투명도 처리 */
+html {
+    background: linear-gradient( rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ), url(../img/sunny.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
+
+
+/*폰트설정*/
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: GmarketSansLight;
+}
+
+
+  /* body의 기본 패딩, 마진 제거 */
+  body{
+      margin: 0;
+      padding: 0;
+  }
+
+/* 왼쪽 기능 설정 */
+.temp-side {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    color: #F5F2E7;
+}
+
+.now-temp {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.now-city {
+    font-size: 50px;
+    margin: 0 10px 0 20px;
+}
+
+.now-icon {
+    font-size: 50px;
+}
+
+/* 오른쪽 기능 설정 */
+.weather-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: inherit;
+
+    color: #F5F2E7;
+}
+
+.clothes-box {
+    margin: 20px;
+}
+
+.clothes {
+    width: 400px;
+    height: 200px;
+}
+
+.first-clothes {
+    width: 150px;
+    height: 200px;
+
+    background-image: url("../img/winter_1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: inline-block;
+}
+
+.second-clothes {
+    width: 150px;
+    height: 200px;
+
+    background-image: url("../img/winter_2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: inline-block;
+}
+
+.comment {
+    margin: 10px;
+}
+
+table {
+    margin: 0 20px 20px 20px;
+    width: 400px;
+}
+
+.info {
+    text-align: left;
+}
+
+.temp {
+    text-align: right;
+}
+
+tr {
+    width: 300px;
+    height: 50px;
+}
+
+
+/* 오른쪽 블랙 박스 설정 */
+.blackbox{
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 600px;
+    height: 100vh;
+    float: right;
+}
+
+
+/* 드롭다운 버튼 */
+.dropdown {
+    margin: 20px;
+}
+
+.cities {
+    width: 400px;
+    padding: 10px 0;
+    border: none;
+    background: none;
+    color: #F5F2E7;
+}
+
+.cities option {
+    background-color: #19282F;
+}
