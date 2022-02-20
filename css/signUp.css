@@ -8,14 +8,36 @@
 * {
     font-family: GmarketSansLight;
 }
-.form {
-    width: 400px;
-    height: 400px;
 
-    background-color: antiquewhite;
+html {
+    background-image: url(../img/snow.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
-    margin: auto;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.left-side {
+    background-color: white;
+    width: 600px;
+    height: 100vh;
+    float: left;
+    box-shadow: 0 6px 20px -15px #000;
+}
+
+.left-form {
+    padding-top: 200px;
+
+
+}
+
 .title {
     width: 160px;
     height: 60px;
@@ -25,30 +47,36 @@
     font-size: 40px;
 
 }
+
 .form-row {
     width: 300px;
     height: 150px;
 
     margin: auto;
 }
+
 .form-group-email {
     width: 300px;
     height: 25px;
 
     margin: 20px auto 10px auto;
 }
+
 .form-group-pw {
     width: 300px;
     height: 25px;
 
-    margin:50px auto 10px auto;
+    margin: 50px auto 10px auto;
 }
+
 .p {
     margin: 0px auto 0px auto;
 }
+
 .p-pw {
     margin: 0px auto 0px auto;
 }
+
 .form-control {
     margin: 10px auto 0px auto;
     height: 30px;
@@ -60,6 +88,7 @@
 
     width: 280px;
 }
+
 .form-control-pw {
     margin: 10px auto 0px auto;
     height: 30px;
@@ -71,25 +100,24 @@
 
     width: 280px;
 }
+
 .form-group {
     margin: 0px auto 10px auto;
 }
-.form-check {
-    margin: 0px 80px auto 45px;
+
+.btn :hover {
+    background-color: #c7c7c7;
 }
+
 .btn {
     width: 80px;
     height: 35px;
 
-    margin: 40px auto auto 150px;
+    margin: 30px auto auto 150px;
 
     border-radius: 8px;
     border-width: thin;
     border-color: #bfbfbf;
     border-style: solid;
 
-}
-
-.btn :hover {
-    background-color: #c7c7c7;
 }
