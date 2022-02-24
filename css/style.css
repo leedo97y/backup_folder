@@ -1,12 +1,38 @@
+/* 로딩 관련 css */
+/* _position에 관련하여 참고 주소 */
+/* https://stackoverflow.com/questions/18106356/what-does-an-underscore-mean-in-css/18106420 */
+#loading {
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    _position:absolute;
+    top: 0px;
+    width: 100%;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity : 0.5;
+}
+.loading {
+    z-index: 100;
+}
+#loading_img{
+    position:absolute;
+    top:50%;
+    left:50%;
+    height:100px;
+    margin-top:-100px;
+    margin-left:-100px;
+    z-index: 200;
+}
+
 /* 배경화면 설정 */
 /* linear-gradient는 배경 투명도 처리 */
 html {
-    background: linear-gradient( rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ), url(../img/sunny.jpg) no-repeat center center fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ), url(../img/apple.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
 
 
@@ -38,7 +64,7 @@ a {
 
 /* 왼쪽 기능 설정 */
 .temp-side {
-    position: absolute;
+    position: fixed;
     left: 0px;
     bottom: 0px;
     color: #F5F2E7;
@@ -62,10 +88,11 @@ a {
 .weather-side {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
     text-align: center;
-    height: inherit;
+    margin-top: 50px;
+    /*height: 100%;*/
 
     color: #F5F2E7;
 }
@@ -82,6 +109,10 @@ a {
     padding: 10px 100px;
 }
 
+.nav-item:hover {
+    font-weight: bold;
+}
+
 .clothes-box {
     margin: 20px;
 }
@@ -95,7 +126,8 @@ a {
     width: 150px;
     height: 200px;
 
-    background-image: url("../img/winter_1.png");
+    /* background-image: url("../img/winter_1.png"); */
+    background-image: url("");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -107,7 +139,7 @@ a {
     width: 150px;
     height: 200px;
 
-    background-image: url("../img/winter_2.png");
+    background-image: url("");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -119,7 +151,7 @@ a {
     margin: 10px;
 }
 
-table {
+.weather-table {
     margin: 0 20px 20px 20px;
     width: 400px;
 }
@@ -143,7 +175,8 @@ tr {
     background-color: black;
     background-color: rgba(0, 0, 0, 0.5);
     width: 600px;
-    height: 100vh;
+    min-height: 100vh;
+    /*height: 100%;*/
     float: right;
 }
 
@@ -171,6 +204,7 @@ tr {
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+    /*height: 100%;*/
 }
 
 .form {
@@ -217,3 +251,21 @@ tr {
 .text-muted {
     display: block;
 }
+
+.date {
+    margin-left: 10px;
+}
+
+.comment-scroll {
+    width: 400px;
+    height: 300px;
+    overflow: auto;
+}
+
+/*스크롤바 꾸미는 부분*/
+::-webkit-scrollbar { width: 6px; } /* 스크롤 바 */
+::-webkit-scrollbar-track { background-color:#ffffff60; } /* 스크롤 바 밑의 배경 */
+::-webkit-scrollbar-thumb { background: #ffffffb5; border-radius: 10px; } /* 실질적 스크롤 바 */
+::-webkit-scrollbar-thumb:hover { background: #ffffff; } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
+/*::-webkit-scrollbar-thumb:active { background: #ffffff; } !* 실질적 스크롤 바를 클릭할 때 *!*/
+::-webkit-scrollbar-button { display: none; } /* 스크롤 바 상 하단 버튼 */
