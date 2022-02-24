@@ -18,67 +18,96 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="wrap">
-        <!-- 왼쪽  -->
-        <div class="temp-side" id="str_color">
-            <span class="now-temp" id="cur_temp_info"></span>
-            <span class="now-city" id="city_info"></span>
-            <!-- icon 양식 -->
-            <!-- <i class="wi wi-snowflake-cold"></i> -->
-            <span class="now-icon"><i id="weather_icon_info" class="now_weather_info"></i></span>
+<div class="wrap">
+    <!-- 왼쪽  -->
+    <div class="temp-side" id="str_color">
+        <span class="now-temp" id="cur_temp_info"></span>
+        <span class="now-city" id="city_info"></span>
+        <!-- icon 양식 -->
+        <!-- <i class="wi wi-snowflake-cold"></i> -->
+        <span class="now-icon"><i id="weather_icon_info" class="now_weather_info"></i></span>
 
-            <!-- Openweathermap API 아이콘 출력 코드(참고용) -->
-            <!-- <span id="icon"><img id="wicon" src="" alt="Weather icon"></span> -->
-        </div>
-        <!-- 오른쪽 -->
-        <div class="blackbox">
-            <div class="comment-side">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/backup_folder/index.html">옷차림</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/backup_folder/comment.html">이야기</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/backup_folder/login.html">로그인</a>
-                    </li>
-                </ul>
-                <div class="form">
-                    <div class="form-group">
-                        <label for="post-local">나의 지역</label>
-                        <input class="form-control" id="post-local" placeholder="ex)ㅇㅇ도 ㅇㅇ시">
-                    </div>
-                    <div class="form-group">
-                        <label for="post-talk">날씨 이야기</label>
-                        <textarea class="form-control" id="post-talk" rows="3" style="resize: none" maxlength="50"
-                                  placeholder="50자 내외로 입력해주세요."></textarea>
-                    </div>
-                    <button type="submit" class="btn" onclick="postTalk()">남기기</button>
+        <!-- Openweathermap API 아이콘 출력 코드(참고용) -->
+        <!-- <span id="icon"><img id="wicon" src="" alt="Weather icon"></span> -->
+    </div>
+    <!-- 오른쪽 -->
+    <div class="blackbox">
+        <div class="comment-side">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">옷차림</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/comment.html">이야기</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login.html">로그인</a>
+                </li>
+            </ul>
+            <div class="form">
+                <div class="form-group">
+                    <label for="post-local">나의 지역</label>
+                    <input class="form-control" id="post-local" placeholder="ex)ㅇㅇ도 ㅇㅇ시">
                 </div>
+                <div class="form-group">
+                    <label for="post-talk">날씨 이야기</label>
+                    <textarea class="form-control" id="post-talk" rows="3" style="resize: none" maxlength="40"
+                              placeholder="40자 내외로 입력해주세요."></textarea>
+                </div>
+                <button type="submit" class="btn" onclick="postComment()">남기기</button>
+            </div>
+            <div class="comment-scroll">
                 <table class="comment-table" id="table-box">
                     <tr>
-                        <td class="form-text"><small class="text-muted">아이디 <span class="date">2022.02.18</span></small>
+                        <td class="form-text"><small class="text-muted">강원도 삼척시 <span
+                                class="date">    2022.02.18</span></small>
                             오늘 많이 춥네요
                         </td>
                     </tr>
                     <tr>
-                        <td class="form-text"><small class="text-muted">아이디 <span class="date">2022.02.18</span></small>
-                            오늘 많이 춥네요
+                        <td class="form-text"><small class="text-muted">서울시 강남구 <span
+                                class="date">2022.02.18</span></small>
+                            서울은 따뜻해요!
                         </td>
                     </tr>
                     <tr>
-                        <td class="form-text"><small class="text-muted">아이디 <span class="date">2022.02.18</span></small>
-                            오늘 많이 춥네요
+                        <td class="form-text"><small class="text-muted">전라도 광주시 <span
+                                class="date">2022.02.18</span></small>
+                            광주는 눈이 와요
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-text"><small class="text-muted">전라도 광주시 <span
+                                class="date">2022.02.18</span></small>
+                            광주는 눈이 와요
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-text"><small class="text-muted">전라도 광주시 <span
+                                class="date">2022.02.18</span></small>
+                            광주는 눈이 와요
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-text"><small class="text-muted">전라도 광주시 <span
+                                class="date">2022.02.18</span></small>
+                            광주는 눈이 와요
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="form-text"><small class="text-muted">전라도 광주시 <span
+                                class="date">2022.02.18</span></small>
+                            광주는 눈이 와요
                         </td>
                     </tr>
                 </table>
-
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="./js/weather.js"></script>
-    <script type="text/javascript" src="./js/date.js"></script>
+</div>
+<script type="text/javascript" src="./js/comment_weather.js"></script>
+<script type="text/javascript" src="./js/date.js"></script>
+<script type="text/javascript" src="js/comment_post.js"></script>
 
 </body>
 </html>
