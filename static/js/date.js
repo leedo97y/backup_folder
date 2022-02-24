@@ -27,7 +27,7 @@ function Time(){
     const weekly = ['일','월','화','수','목','금','토'];
     const week = weekly[date.getDay()] // '요일'을 저장
     clockTitle.innerText = `${year}년 ${month < 10 ? `0${month}` : month}월 ${day < 10 ? `0${day}` : day}일 ${week}요일 ${hour < 12 ? "오전" : "오후"} ${hour < 10 ? `0${hour}` : hour > 12 ? `${hour-12}` : hour}시 ${minute < 10 ? `0${minute}` : minute}분`;
-    // hour > 12 ? `${hour-12} : hour
+                                                                // hour > 12 ? `${hour-12} : hour
 }
 
 function show(){

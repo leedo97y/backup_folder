@@ -2,22 +2,19 @@ function postComment() {
         let local = $("#post-local").val();
         let talk = $("#post-talk").val();
 
-        if ($('#post-local').val() == '') {
+        if (local === '') {
             alert('지역을 입력하세요!');
             return false;
-        }
-        if ($('#post-talk').val() == '') {
+
+        } else if (talk === '') {
             alert('날씨 이야기를 입력하세요!');
             return false;
         } else {
-            local = $("#post-local").val();
-            talk = $("#post-talk").val();
 
             function getToday() {
                 var date = new Date();
                 return date.getFullYear() + "." + ("0" + (date.getMonth() + 1)).slice(-2) + "." + ("0" + date.getDate()).slice(-2) + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
             }
-            //날짜 부분 수정 작업 예정
 
             let date = getToday();
 

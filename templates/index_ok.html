@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" id="backimg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>오늘 어떻게 입지?</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/mediaquery.css">
+
+    <!-- 날씨 아이콘 css -->
+    <link rel="stylesheet" href="../static/css/weather-icons-wind.css">
+    <link rel="stylesheet" href="../static/css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="../static/css/weather-icons.css">
+    <link rel="stylesheet" href="../static/css/weather-icons.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery Cookie-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+    <!-- 왼쪽  -->
+    <div class="temp-side" id="str_color">
+        <span class="now-temp" id="cur_temp_info"></span>
+        <span class="now-city" id="city_info"></span>
+        <!-- icon 양식 -->
+        <!-- <i class="wi wi-snowflake-cold"></i> -->
+        <span class="now-icon"><i id="weather_icon_info" class="now_weather_info"></i></span>
+
+        <!-- Openweathermap API 아이콘 출력 코드(참고용) -->
+        <!-- <span id="icon"><img id="wicon" src="" alt="Weather icon"></span> -->
+    </div>
+
+    <!-- 오른쪽 -->
+    <div class="blackbox">
+        <div class="weather-side">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index_ok">옷차림</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/comment_ok">이야기</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="logout()">로그아웃</a>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <form>
+                    <select name="city" class="cities" id="selectGeo">
+                        <option value="현위치">현위치</option>
+                        <option value="서울">서울</option>
+                        <option value="강릉">강릉</option>
+                        <option value="대전">대전</option>
+                        <option value="대구">대구</option>
+                        <option value="광주">광주</option>
+                        <option value="부산">부산</option>
+                        <option value="제주">제주</option>
+                    </select>
+                </form>
+            </div>
+            <div class="clothes-box">
+                <div class="clothes">
+                    <div class="first-clothes"></div>
+                    <div class="second-clothes"></div>
+                </div>
+                <div class="user-comment">
+                    {{nickname}}님께 드리는 오늘의 추천 옷차림!
+                </div>
+                <div class="comment">
+                </div>
+            </div>
+            <table class="weather-table">
+                <thead>
+                <tr class="clock">
+                    <td class="info" colspan="2"></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="info"><i class="wi wi-thermometer"></i> 체감 온도</td>
+                    <td class="temp" id="feel_temp_info"></td>
+                </tr>
+                <tr>
+                    <td class="info"><i class="wi wi-sunrise"></i> 최저 / 최고 온도</i></td>
+                    <td class="temp" id="temp_min_max_info"></td>
+                </tr>
+                <tr>
+                    <td class="info"><i class="wi wi-raindrop"></i> 습도</td>
+                    <td class="temp" id="humidity_info"></td>
+                </tr>
+                <tr>
+                    <td class="info"><i class="wi wi-strong-wind"></i> 풍속</td>
+                    <td class="temp" id="wind_info"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/loading.js') }}" > </script>
+<script src="{{ url_for('static', filename='js/weather.js') }}" > </script>
+<script src="{{ url_for('static', filename='js/date.js') }}" > </script>
+<script src="{{ url_for('static', filename='js/logout.js') }}" > </script>
+<!--    <script type="text/javascript" src="./js/loading.js"></script>-->
+<!--    <script type="text/javascript" src="./js/weather.js"></script>-->
+<!--    <script type="text/javascript" src="./js/date.js"></script>-->
+</body>
+</html>

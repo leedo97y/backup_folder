@@ -2,38 +2,38 @@
 /* _position에 관련하여 참고 주소 */
 /* https://stackoverflow.com/questions/18106356/what-does-an-underscore-mean-in-css/18106420 */
 #loading {
-    height: 100%;
-    left: 0px;
-    position: fixed;
-    _position:absolute;
-    top: 0px;
-    width: 100%;
-    filter:alpha(opacity=50);
-    -moz-opacity:0.5;
-    opacity : 0.5;
+	height: 100%;
+	left: 0px;
+	position: fixed;
+	_position:absolute; 
+	top: 0px;
+	width: 100%;
+	filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity : 0.5;
 }
 .loading {
-    z-index: 100;
+	z-index: 100;
 }
 #loading_img{
-    position:absolute;
-    top:50%;
-    left:50%;
-    height:100px;
-    margin-top:-100px;
-    margin-left:-100px;
-    z-index: 200;
+	position:absolute; 
+	top:50%;
+	left:50%;
+	height:100px;
+	margin-top:-100px;	
+	margin-left:-100px;	
+	z-index: 200;
 }
 
 /* 배경화면 설정 */
 /* linear-gradient는 배경 투명도 처리 */
 html {
-    background: linear-gradient( rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ), url(../img/apple.jpg) no-repeat center center fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ), url(../img/logo.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+  }
 
 
 /*폰트설정*/
@@ -52,14 +52,14 @@ html {
 
 /* body의 기본 패딩, 마진 제거 */
 body{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*모든 a태그 효과 삭제*/
 a {
-    text-decoration: none;
-    color: #F5F2E7;
+  text-decoration: none;
+  color: #F5F2E7;
 }
 
 /* 왼쪽 기능 설정 */
@@ -67,7 +67,6 @@ a {
     position: fixed;
     left: 0px;
     bottom: 0px;
-    color: #F5F2E7;
 }
 
 .now-temp {
@@ -93,8 +92,6 @@ a {
     text-align: center;
     margin-top: 50px;
     /*height: 100%;*/
-
-    color: #F5F2E7;
 }
 
 .nav {
@@ -147,10 +144,6 @@ a {
     display: inline-block;
 }
 
-.comment {
-    margin: 10px;
-}
-
 .weather-table {
     margin: 0 20px 20px 20px;
     width: 400px;
@@ -165,7 +158,6 @@ a {
 }
 
 tr {
-    width: 300px;
     height: 50px;
 }
 
@@ -191,11 +183,14 @@ tr {
     padding: 10px 0;
     border: none;
     background: none;
-    color: #F5F2E7;
 }
 
 .cities option {
-    background-color: #19282F;
+    background-color: black;
+}
+
+.cities:focus-visible {
+    outline: none;
 }
 
 /*이야기 설정*/
@@ -236,12 +231,13 @@ tr {
 .btn {
     background: none;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 8px;
 }
 
 .btn:hover {
     cursor: pointer;
+    background-color: #f5f2e740
 }
 
 .form-text {
@@ -258,7 +254,13 @@ tr {
 
 .comment-scroll {
     width: 400px;
-    height: 300px;
+    height: 70vh;
+    overflow: auto;
+}
+
+.comment-scroll-ok {
+    width: 400px;
+    height: 40vh;
     overflow: auto;
 }
 

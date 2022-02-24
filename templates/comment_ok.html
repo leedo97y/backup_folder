@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" id="backimg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>오늘 어떻게 입지?</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/mediaquery.css">
+
+    <!-- 날씨 아이콘 css -->
+    <link rel="stylesheet" href="../static/css/weather-icons-wind.css">
+    <link rel="stylesheet" href="../static/css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="../static/css/weather-icons.css">
+    <link rel="stylesheet" href="../static/css/weather-icons.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery Cookie-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!-- 왼쪽  -->
+    <div class="temp-side" id="str_color">
+        <span class="now-temp" id="cur_temp_info"></span>
+        <span class="now-city" id="city_info"></span>
+        <!-- icon 양식 -->
+        <!-- <i class="wi wi-snowflake-cold"></i> -->
+        <span class="now-icon"><i id="weather_icon_info" class="now_weather_info"></i></span>
+
+        <!-- Openweathermap API 아이콘 출력 코드(참고용) -->
+        <!-- <span id="icon"><img id="wicon" src="" alt="Weather icon"></span> -->
+    </div>
+    <!-- 오른쪽 -->
+    <div class="blackbox">
+        <div class="comment-side">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index_ok">옷차림</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/comment_ok">이야기</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="logout()">로그아웃</a>
+                </li>
+            </ul>
+            <div class="form">
+                <div class="form-group">
+                    <label for="post-local">{{nickname}}님의 지역</label>
+                    <input class="form-control" id="post-local" placeholder="거주 지역을 입력해 주세요. ex) 강원도 삼척시">
+                </div>
+                <div class="form-group">
+                    <label for="post-talk">날씨 이야기</label>
+                    <textarea class="form-control" id="post-talk" rows="3" style="resize: none" maxlength="40"
+                              placeholder="40자 내외로 입력해 주세요. ex) 삼척에는 눈이 와요!"></textarea>
+                </div>
+                <button type="submit" class="btn" onclick="postComment()">남기기</button>
+            </div>
+            <div class="comment-scroll-ok">
+                <table class="comment-table" id="table-box">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/comment_weather.js') }}" > </script>
+<script src="{{ url_for('static', filename='js/comment_post.js') }}" > </script>
+<script src="{{ url_for('static', filename='js/comment_show.js') }}" > </script>
+<script src="{{ url_for('static', filename='js/logout.js') }}" > </script>
+<!--    <script type="text/javascript" src="./js/comment_weather.js"></script>-->
+<!--    <script type="text/javascript" src="./js/date.js"></script>-->
+<!--    <script type="text/javascript" src="js/comment_post.js"></script>-->
+
+</body>
+</html>

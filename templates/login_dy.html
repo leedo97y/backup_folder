@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/mediaquery.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/mediaquery.css">
+    <link rel="stylesheet" href="../static/css/login_dy.css">
 
     <!-- 날씨 아이콘 css -->
-    <link rel="stylesheet" href="./css/weather-icons-wind.css">
-    <link rel="stylesheet" href="./css/weather-icons-wind.min.css">
-    <link rel="stylesheet" href="./css/weather-icons.css">
-    <link rel="stylesheet" href="./css/weather-icons.min.css">
+    <link rel="stylesheet" href="css/weather-icons-wind.css">
+    <link rel="stylesheet" href="css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="css/weather-icons.css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -40,21 +40,21 @@
         <div class="comment-side">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.html">옷차림</a>
+                    <a class="nav-link" href="/">옷차림</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/comment.html">이야기</a>
+                    <a class="nav-link" href="/comment">이야기</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login.html">로그인</a>
+                    <a class="nav-link" href="/login">로그인</a>
                 </li>
             </ul>
 
             <form class="form" id="form-all">
                 <h1 class="title">로그인</h1>
                 <div class="form-group">
-                    <label for="email" class="email">아이디</label>
-                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                    <label for="id" class="email">아이디</label>
+                    <input type="email" class="form-control" id="id" name="email" aria-describedby="emailHelp"
                            placeholder="Enter email" style="padding-left: 10px">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
@@ -72,10 +72,10 @@
 
                 <div class="login-api" id="kakao-data">
                     <a href="https://kauth.kakao.com/oauth/authorize?client_id=d860d38c992ca8bf5f07dcc3fd5122b9&redirect_uri=http://localhost:9090/member/auth/kakao/callback&response_type=code"><img
-                            src="./img/kakao_login_medium_wide.png"></a>
+                            src="../static/img/kakao_login.png"></a>
                 </div>
                 <div class="links" id="forgot-pw">
-                    <a href="#" >비밀번호를 잊어버리셨나요?</a>
+                    <a href="/findPw" >비밀번호를 잊어버리셨나요?</a>
 
                 </div>
 
@@ -84,6 +84,7 @@
         </div>
     </div>
 </div>
+
 
 </body>
 </html>
